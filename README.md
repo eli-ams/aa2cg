@@ -103,7 +103,7 @@ grouped atoms with colored beads, while the 3D overlay shows how those beads
 relate to the atomistic molecule. Bead colors match across both views. Build the
 mapped trajectory when the mapping is ready.
 
-[Watch or download the bead-typing demo (MP4)](markdown-resources/bead-typing.mp4).
+![Animated demonstration of selecting atoms and creating bead rules.](markdown-resources/bead-typing.gif)
 
 ![Methylbenzene bead labels in the 2D sketcher beside matching colored bead overlays on the all-atom 3D molecule.](markdown-resources/methylbenzene_2.PNG)
 
