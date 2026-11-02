@@ -1,0 +1,6 @@
+{
+  "resolution_w": 1200,
+  "resolution_h": 800,
+  "aa_dynamic": true,
+  "status_update_delay_ms": 250
+}

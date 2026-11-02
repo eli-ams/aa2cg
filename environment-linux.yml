@@ -1,0 +1,19 @@
+# Fresh Linux x86-64 setup. Do not apply this to an existing working Python 3.7
+# environment: keep that environment and run the updated source directly.
+# This is a solver specification, not a tested lockfile.
+name: openmscg-workbench
+channels:
+  - conda-forge
+  - vothgroup
+  - nodefaults
+dependencies:
+  - python=3.8
+  - vothgroup::openmscg=0.9.0
+  - pyside6>=6.4,<6.7
+  - rdkit
+  - numpy<2
+  - scipy
+  - matplotlib>=3.5,<3.8
+  - moderngl>=5.8,<6
+  - optuna>=3,<4
+  - tomli>=2,<2.1

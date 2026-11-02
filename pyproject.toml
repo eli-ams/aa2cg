@@ -1,0 +1,34 @@
+[build-system]
+requires = [
+    "setuptools>=61,<68; python_version < '3.8'",
+    "setuptools>=68; python_version >= '3.8'",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aa2cg"
+version = "0.1.0b1"
+description = "AA2CG: a visual workflow for mapping, fitting, optimizing and validating coarse-grained force fields."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.7"
+# Runtime dependencies are provisioned by Conda, not by pip/PyPI.
+# See environment-linux.yml / environment-windows.yml for installation.
+# No environment manager is required or checked at runtime.
+dependencies = []
+
+[project.scripts]
+aa2cg = "openmscg_gui.app:main"
+# Retain the existing command as a compatibility alias.
+openmscg-gui = "openmscg_gui.app:main"
+
+[project.urls]
+Repository = "https://github.com/eli-ams/aa2cg"
+Issues = "https://github.com/eli-ams/aa2cg/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"openmscg_gui" = ["tutorial_data/*.json", "tutorial_data/*.md", "tutorial_data/*.data", "tutorial_data/*.lammpstrj", "tutorial_data/*.out", "assets/theme/*.svg"]
+"openmscg_gui.molecule_drawer" = ["settings.json"]

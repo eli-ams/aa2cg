@@ -1,0 +1,15 @@
+# Windows GUI/preview environment; no native OpenMSCG backend.
+# This is a solver specification, not a tested lockfile.
+name: openmscg-workbench-preview
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11
+  - pyside6>=6.4,<7
+  - rdkit
+  - numpy<2
+  - scipy
+  - matplotlib>=3.6
+  - moderngl>=5.8,<6
+  - optuna>=3,<4

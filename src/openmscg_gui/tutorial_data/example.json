@@ -1,0 +1,8 @@
+{
+  "schema_version": 2,
+  "name": "Squalane oil",
+  "download_url": "<LINK>",
+  "structure": "structure.data",
+  "trajectory": "aa.lammpstrj",
+  "aa_properties": "properties.txt"
+}
