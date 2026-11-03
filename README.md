@@ -12,6 +12,8 @@ fit the interactions, generate simulation inputs, and optimize the model against
 selected properties. Compare the resulting CG simulation with the atomistic
 reference in the same workspace.
 
+![Methylbenzene shown as an all-atom molecule, with translucent mapping overlays, and as a coarse-grained bead model.](markdown-resources/methylbenzene_aa-to-cg.PNG)
+
 ## Why this project?
 
 Coarse graining involves several connected tasks: identifying molecular species,
