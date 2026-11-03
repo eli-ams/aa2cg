@@ -12,10 +12,6 @@ fit the interactions, generate simulation inputs, and optimize the model against
 selected properties. Compare the resulting CG simulation with the atomistic
 reference in the same workspace.
 
-![Methylbenzene shown as an all-atom molecule, with translucent mapping overlays, and as a coarse-grained bead model.](markdown-resources/methylbenzene_aa-to-cg.PNG)
-
-*Methylbenzene (toluene): atomistic structure → mapped groups → coarse-grained beads.*
-
 ## Why this project?
 
 Coarse graining involves several connected tasks: identifying molecular species,
@@ -82,20 +78,6 @@ system, one species or a single molecule without changing the source data.
 
 ![Single Squalane molecule in the 3D trajectory viewer beside its detected 2D molecular structure.](markdown-resources/inspect-molecule.jpg)
 
-<details>
-<summary>View the full atomistic system</summary>
-
-![Full Squalane atomistic system with its simulation box, alongside the detected molecular species.](markdown-resources/inspect-system.jpg)
-
-</details>
-
-<details>
-<summary>Another species: methylbenzene in 2D and 3D</summary>
-
-![Detected methylbenzene structure in the 2D sketcher beside its all-atom 3D representation.](markdown-resources/methylbenzene_1.PNG)
-
-</details>
-
 ### 2. Map
 
 Select atoms in the sketcher and create bead rules. The mapping preview replaces
@@ -105,16 +87,7 @@ mapped trajectory when the mapping is ready.
 
 ![Animated demonstration of selecting atoms and creating bead rules.](markdown-resources/bead-typing.gif)
 
-![Methylbenzene bead labels in the 2D sketcher beside matching colored bead overlays on the all-atom 3D molecule.](markdown-resources/methylbenzene_2.PNG)
-
-*The same bead types have the same colors in the sketcher and the 3D overlay.*
-
-<details>
-<summary>View the Squalane mapping workspace</summary>
-
 ![Squalane bead mapping in the 2D sketcher beside a 3D overlay of beads and atomistic structure.](markdown-resources/mapping-aa-cg-overlay.jpg)
-
-</details>
 
 ### 3. Configure fit
 
@@ -131,33 +104,17 @@ Run force matching and inspect the raw energy and force curves alongside their
 fit settings. Independent fitting is the default; coupled fitting is also
 available. Changing a setting does not silently launch a new calculation.
 
-<details>
-<summary>View force-matching settings and raw results</summary>
-
-![Completed independent force fit showing per-interaction bounds, spacing and spline order beside raw bond energy and force curves.](markdown-resources/force-matching-results.jpg)
-
-</details>
-
 ### 5. Prepare tables
 
 Compare raw and processed curves on a shared plot. Keep automatic processing or
 adjust smoothing, trimming and tail extension per interaction. Preview first,
 then explicitly export the prepared tables.
 
-![Table-processing preview with raw and processed energy and force curves, trimming bounds, smoothing and tail-extension controls.](markdown-resources/prepare-tables-preview.jpg)
-
 ### 6. LAMMPS
 
 Generate `input.data`, `structure.data` and the interaction tables. Review the
 inputs and optionally run the smoke test. This checks initialization only—it
 does not run production dynamics or establish model stability.
-
-<details>
-<summary>View generated inputs and the smoke-test controls</summary>
-
-![LAMMPS setup with input.data and structure.data displayed side by side, plus the launch command and zero-step smoke-test controls.](markdown-resources/lammps-setup.jpg)
-
-</details>
 
 ### 7. Refine — optional
 
@@ -183,13 +140,6 @@ Choose the target properties, weights and tolerances to guide the optimization.
 The current method tunes Gaussian corrections to the fitted pair potentials.
 You can also skip refinement and run the generated LAMMPS setup externally.
 
-<details>
-<summary>View property objectives and refinement controls</summary>
-
-![Refinement workspace with an example Density objective, Explore and Refine trial budgets, simulation-protocol controls and LAMMPS command.](markdown-resources/refine-property-objectives.jpg)
-
-</details>
-
 ### 8. Validate
 
 Compare distributions and matching AA/CG properties side by side. Load AA
@@ -210,15 +160,6 @@ instantaneous conformations. Validation requires an actual CG trajectory, not
 just a successful smoke test.
 
 ![Single-molecule comparison of the atomistic Squalane reference with bead overlays and the independent CG simulation, using shared playback controls.](markdown-resources/validate-molecule-comparison.jpg)
-
-*Compare one molecule at a time, with linked views and playback by relative trajectory progress.*
-
-<details>
-<summary>View the full AA and CG systems side by side</summary>
-
-![Full atomistic and independent coarse-grained Squalane systems shown side by side in Validate.](markdown-resources/validate-system-comparison.jpg)
-
-</details>
 
 For multi-system work, **Combine systems** provides a separate workflow for
 merging at least two optimized systems, with optional further optimization.
