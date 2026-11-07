@@ -1,8 +1,5 @@
 # AA2CG
 
-**0.1.0 beta 1 — first public beta.** Package version: `0.1.0b1`.
-GitHub release tag: `v0.1.0-beta.1`. See the [release notes](CHANGELOG.md).
-
 **Create your own coarse-grained force fields from LAMMPS trajectories—all in one application.**
 
 AA2CG is a desktop application for building, optimizing and
